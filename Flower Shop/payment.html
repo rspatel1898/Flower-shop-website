@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fiore Flowers | Payment</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="all" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css" media="all" /><![endif]-->
+</head>
+<body>
+<div id="header" style="padding-bottom: 10px">    
+      <ul>
+        <li ><a href="index.html">home</a></li>
+        <li><a href="flowers.html">our flowers</a></li>
+        <li ><a href="handling.html">handling &amp; delivery</a></li>
+        <li class="selected"><a href="payment.html">ordering</a></li>
+        <li><a href="https://www.proflowers.com/blog/category/florapedia?ref=homenoref" target="_blank">Florapedia</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact us</a></li>
+      </ul>
+      
+    </div>
+
+<div style="width: 99%;height:250px;z-index: 1">
+  <div id="particles-js"></div>
+
+  <div class="text" >
+  </div>
+</div>
+
+
+<!-- scripts -->
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+
+<!-- stats.js -->
+<script src="js/lib/stats.js"></script>
+<div id="body">
+  <div class="payment">
+    <h1>payment &amp; ordering</h1>
+    <div class="section1" >
+      <div style="float:left;width: 48%;margin-top:10px"> <img src="images/tulips2.jpg" alt="" style="height:350px;width: 70%" /> </div>
+      <div style="float:right;width: 48%"> 
+        <form>
+          <p style="padding-top: 30px">
+            <span style="margin-top:20px;color:pink;font-size:75px;padding-top: 10px">Tulips</span><br>
+            <p style="margin-top:20px;font-size:25px;padding-top: 10px">Price: Rs.<input type="button" value="2" id="price" style="border-style: none;background-color: white;font-size: 25px "><br></p></p>
+          <p style="padding-top: 10px;font-size: 25px">Quantity: 
+            <input type="number" id="quntity" value="2" min="2" style="padding-left: 20px;font-size: 25px;width:50px"><br></p>
+          <input type="button" onClick="multiplyBy()" Value="Buy" style="width:100px;height: 25px;margin-top:10px" />
+          <p>The Total is : Rs.<span id = "result"></span>
+          </p> 
+
+        <p style="text-align: bottom;padding-bottom: 10px"> <span >Note:</span> Minimum quantity per order is 2.</p>
+        </form>
+          
+      </div>
+    </div>
+    <div class="section2">
+      <div style="float:left;width: 48%;margin-top:10px"> <img src="images/1.jpg" alt="" style="height:350px;width: 70%" /> </div>
+      <div style="float:right;width: 48%"> 
+        <form>
+          <p style="padding-top: 30px">
+            <span style="margin-top:20px;color:pink;font-size:75px;padding-top: 10px">Roses</span><br>
+            <p style="margin-top:20px;font-size:25px;padding-top: 10px">Price: Rs.<input type="button" value="3" id="price1" style="border-style: none;background-color: white;font-size: 25px "><br></p></p>
+          <p style="padding-top: 10px;font-size: 25px">Quantity: 
+            <input type="number" id="quntity1" value="2" min="2" style="padding-left: 20px;font-size: 25px;width:50px"><br></p>
+          <input type="button" onClick="multiplyBy2()" Value="Buy" style="width:100px;height: 25px;margin-top:10px" />
+          <p>The Total is : Rs.<span id = "result1"></span>
+          </p> 
+
+        <p style="text-align: bottom;padding-bottom: 10px"> <span >Note:</span> Minimum quantity per order is 2.</p>
+        </form>
+          
+      </div>
+    </div>
+    <div id="cart" >
+
+      <input type="button" id="cart1" onClick="cart()" Value="Proceed to Buy" align="center" style="width:200px;height: 50px;margin-top:10px" />
+    </div>
+    </div>
+  </div>
+</div>
+<script >
+  function multiplyBy()
+{
+        num1 = document.getElementById("price").value;
+        num2 = document.getElementById("quntity").value;
+        if (num2 < 2) { document.getElementById("quntity").value=2; num2=2;}
+        document.getElementById("result").innerHTML = 2 * num2;
+}
+function multiplyBy2()
+{
+        num1 = document.getElementById("price1").value;
+        num2 = document.getElementById("quntity1").value;
+        if (num2 < 2) { document.getElementById("quntity1").value=2; num2=2;}
+        document.getElementById("result1").innerHTML = 3 * num2;
+}
+function cart(){
+        num1 = document.getElementById("price").value;
+        num2 = document.getElementById("quntity").value;
+        if (num2 < 2) { document.getElementById("quntity").value=2; num2=2;}
+        sum  = 2 * num2;
+        document.getElementById("result").innerHTML = 2 * num2;
+        num1 = document.getElementById("price1").value;
+        num2 = document.getElementById("quntity1").value;
+        if (num2 < 2) { document.getElementById("quntity1").value=2; num2=2;}
+        sum += 3* num2;
+        document.getElementById("result1").innerHTML = 3*num2;
+        document.getElementById("cart1").value = "Proceed to Buy Rs." + sum;
+}
+</script>
+<div id="footer">
+  <div>
+    <div class="connect">
+      <h4>Follow us:</h4>
+      <ul>
+        <li class="facebook"><a href="#">facebook</a></li>
+        
+      </ul>
+    </div>
+    <p>Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved | Template By <a target="_blank" href="">Master.com</a></p>
+  </div>
+</div>
+</body>
+</html>

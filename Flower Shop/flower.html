@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Flower Shop</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+</head>       
+<script>
+  function greating(){
+    var d = new Date();
+    var hour = d.getHours();
+    if(hour<12)
+      alert("Good Morning");
+    else if(hour<17)
+      alert("Good Afternoon");
+    else if(hour<22)
+      alert("Good Evening");
+    else
+      alert("Good Night");
+  }
+</script>       
+<body onload="greating()">
+
+<!-- count particles -->
+
+
+<!-- particles.js container -->
+
+<div id="header" style="padding-bottom: 10px">    
+      <ul>
+        <li class="selected"><a href="index.html">home</a></li>
+        <li><a href="flowers.html">our flowers</a></li>
+        <li><a href="handling.html">handling &amp; delivery</a></li>
+        <li><a href="payment.html"> ordering</a></li>
+        <li><a href="https://www.proflowers.com/blog/category/florapedia?ref=homenoref" target="_blank">Florapedia</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact us</a></li>
+      </ul>
+      
+    </div>
+
+<div style="width: 100%;height:250px;z-index: 1">
+  <div id="particles-js"></div>  
+</div>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="body">
+  <p id="countdown" style="width:633px;font-color:blue;height: 45px;background-color: pink;padding-left:700px;padding-top: 15px;font-family: arial;font-size: 30px">
+  </p>
+    <script>
+
+          var countDownDate = new Date("Nov 8, 2018 08:00:00").getTime();
+          var x = setInterval(function() {
+
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+          document.getElementById("countdown").innerHTML = days + " days " + hours + " hours "
+          + minutes + " min " + seconds + " secs to Diwali !!! ";
+          
+          if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("countdown").innerHTML = "EXPIRED";
+          }
+      }, 1000);
+    </script>
+    <div class="content"> <span class="heading"><img src="images/special-occasions-flowers.gif" alt style="border-radius: 5px" /></span>
+      <div>
+        <div>
+          <ul>
+            <li><a href="#"><img src="images/tulips.jpg" alt="" class="zoom" /> <span>Tulips</span></a></li>
+            <li><a href="#"><img src="images/bouquet.jpg" alt="" class="zoom" /> <span>Bouquet</span></a></li>
+            <li><a href="#"><img src="images/roses.jpg" alt="" class="zoom" /> <span>Roses</span></a></li>
+            <li><a href="#"><img src="images/bouquet2.jpg" alt="" class="zoom"/> <span>Bouquet</span></a></li>
+            <li><a href="#"><img src="images/roses2.jpg" alt="" class="zoom"/> <span>Roses</span></a></li>
+            <li><a href="#"><img src="images/bridal-bouquet2.jpg" alt=""  class="zoom"/> <span>Bridal Bouquet</span></a></li>
+            <li><a href="#"><img src="images/sunflower.jpg" alt="" class="zoom"/> <span>Sunflower</span></a></li>
+            <li><a href="#"><img src="images/bouquet3.jpg" alt=""  class="zoom"/> <span>Bouquet</span></a></li>
+            <li><a href="#"><img src="images/speedwell.jpg" alt="" class="zoom" /> <span>Speedwell</span></a></li>
+          </ul>
+          
+        </div>
+        <ul>
+          <li>
+            <h3>Flower Delivery In Ahmedabad : Same Day & Midnight Delivery.</h3>
+            <p>Picking a perfect and meaningful gift for your dear ones is really a difficult task. But, if you have a beautiful bunch of vibrant and aromatic flowers then, you need to worry at all. With FlowerAura's flower delivery in Ahmedabad, you can now send beautiful blooms to your special ones on any occasion that they will absolutely adore.</p>
+          </li>
+
+          <li>
+            <h3>Adorn the Birthday of your Near and Dear one with Online Flowers.</h3>
+            <p>Immense celebrations, festivity and frolic have always been associated with birthdays. The one day of your life when everyone around you makes you feel special. Your mother makes delicious sweets for you, your father brings you a birthday present and your siblings make those cute little cards for you. Today when you are independent and big enough don’t you think it is your responsibility that you should make your dear and loved ones feel loved. And if you are miles apart from your siblings or grandparents but want to celebrate their birthday, there is the perfect gift of love and care - flowers, which you can send through the ace network of Floweraura website.</p>
+          </li>          
+        </ul>
+      </div>
+    </div>
+
+<div id="footer">
+  <div>
+    <div class="connect">
+      <h4>Follow us:</h4>
+      <ul>
+        <li class="facebook"><a href="https://www.facebook.com/FlowerzAndFeelingz/">facebook</a></li>
+        
+      </ul>
+    </div>
+    <p>Copyright &copy; <a href="#"></a> - All Rights Reserved </p>
+  </div>
+</div>
+
+
+  </div>
+
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+<script src="js/lib/stats.js"></script>
+
+
+</body>
+</html>
